@@ -1,4 +1,4 @@
-# 
+# (작성중)
 
 ## 1️⃣분석목적
 
@@ -14,7 +14,7 @@
 
 ## 3️⃣분석순서
 
-- 데이터파악
+- **데이터파악**
     ![image](https://user-images.githubusercontent.com/23291338/210584485-30478818-5a80-4f0a-8d98-36065f47a844.png)
     
     - Year는 실수형이 아닌 정수형으로 변경해준다.
@@ -22,7 +22,7 @@
     - Genre, Publisher의 결측치 처리
     - NA_Sales, EU_Sales, JP_Sales, Other_Sales 은 object가 아닌 float으로 데이터 타입 변경.데이터에 문자열이 없는지 체크하고 타입변환.
     
-- 데이터전처리
+- **데이터전처리**
     - `Genre` `Year` `Publisher`
         - 결측치 비율 - 각각 0.3%, 16%, 0.3%
         - genre, publisher는 결측치 비율이 낮아서 drop하지만, year의 경우 16%이다.
@@ -57,7 +57,15 @@
       # 중복값
       df.duplicated().sum()
       ```
-      
+- **EDA, Data Wrangling , 가설검정**
+    - Sales total 컬럼 추가
+    ```
+    df['Sales_total'] = df['NA_Sales'] + df['EU_Sales'] + df['JP_Sales'] + df['Other_Sales']
+    ```
+    ![image](https://user-images.githubusercontent.com/23291338/210585560-660ea8da-400f-4a68-b48d-4d8d06b46098.png)
+
+
+
 ## 4️⃣결론
 
 - take two interactive회사에서 액션 장르의 게임을 북미로 출시하고, 지원되는 플랫폼은 PS3로 선정합니다. 추가 지역별로 플랫폼 선호도를 봤을때 북미지역은 PS3보다 PS2의 선호도가 높은 것을 확인할 수 있었지만, 일부분 호환이 가능하기때문에 PS3로 선정해도 무방하다고 판단.
