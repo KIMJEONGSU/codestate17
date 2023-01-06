@@ -18,7 +18,7 @@
     ![image](https://user-images.githubusercontent.com/23291338/210584485-30478818-5a80-4f0a-8d98-36065f47a844.png)
     
     - Year는 실수형이 아닌 정수형으로 변경해준다.
-    - Year의 경우 nan값이 71개로 결측치 처리 후에 타입 변환.
+    - Year의 경우 nan값이 271개로 결측치 처리 후에 타입 변환.
     - Genre, Publisher의 결측치 처리
     - NA_Sales, EU_Sales, JP_Sales, Other_Sales 은 object가 아닌 float으로 데이터 타입 변경.데이터에 문자열이 없는지 체크하고 타입변환.
     
